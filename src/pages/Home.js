@@ -12,7 +12,7 @@ export class Home extends Component {
   }
 
   _renderResults () {
-    return typeof this.state.results === 'undefined' 
+    return this.state.results.length === 0 
       ? <p>Sorry!<span role="img" aria-label="Emoji sad face">😌</span>Results not found</p>
       : <MoviesList movies ={this.state.results} />
      
@@ -28,6 +28,7 @@ export class Home extends Component {
                 ? this._renderResults()
                 : <small>Use the form to search a movie</small>
                 }
+                
             </div>
         )
     }

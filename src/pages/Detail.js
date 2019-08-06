@@ -7,12 +7,12 @@ const API_KEY = 'b9322110'
 
 export class Detail extends Component {
     static propTypes = {
-       match: PropTypes.shape({
-           params: PropTypes.object,
-           isExact: PropTypes.bool,
-           path: PropTypes.string, 
-           url: PropTypes.string
-       })
+        match: PropTypes.shape({
+          params: PropTypes.object,
+          isExact: PropTypes.bool,
+          path: PropTypes.string,
+          url: PropTypes.string
+        })
     }
 
     state = { movie: {} }
@@ -28,6 +28,7 @@ export class Detail extends Component {
     _goBack (){
     window.history.back()
     }
+    
     componentDidMount (){
         console.log(this.props)
         const { movieId } = this.props.match.params
